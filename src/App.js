@@ -54,11 +54,11 @@ const gems = [
 export default function Chapolruta() {
   const [activeDay, setActiveDay] = useState(1);
   const [activeTab, setActiveTab] = useState("itinerary");
-  const [filterCity, setFilterCity] = useState("ALL");
+  const [filterCity, setFilterCity] = useState("All");
 
   const currentDay = days.find((d) => d.id === activeDay);
   const cities = ["All", ...new Set(gems.map((g) => g.city))];
-  const filteredGems = filterCity === "ALL" ? gems : gems.filter((g) => g.city === filterCity);
+  const filteredGems = filterCity === "All" ? gems : gems.filter((g) => g.city === filterCity);
 
   return (
     <div style={{
